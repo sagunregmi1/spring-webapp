@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: True
+  become_method: sudo
+  tasks:
+
+    - name: Unzip WAR file
+      copy: src= /var/lib/jenkins/workspace/pro3/target/webapptest.war dest=/opt/tomcat/webapps
